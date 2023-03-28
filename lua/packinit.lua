@@ -35,26 +35,26 @@ require('packer').startup({
         require('pack/vim-expand-region').config()
         use { 'terryma/vim-expand-region', config = "require('pack/vim-expand-region').setup()" }
 
-        -- ff 高亮光标下的word
-        require('pack/vim-interestingwords').config()
-        use { 'lfv89/vim-interestingwords', config = "require('pack/vim-interestingwords').setup()" }
+        -- -- ff 高亮光标下的word
+        -- require('pack/vim-interestingwords').config()
+        -- use { 'lfv89/vim-interestingwords', config = "require('pack/vim-interestingwords').setup()" }
 
-        -- 多光标插件
-        require('pack/vim-visual-multi').config()
-        use { 'mg979/vim-visual-multi', config = "require('pack/vim-visual-multi').setup()", event = 'CursorHold' }
+        -- -- 多光标插件
+        -- require('pack/vim-visual-multi').config()
+        -- use { 'mg979/vim-visual-multi', config = "require('pack/vim-visual-multi').setup()", event = 'CursorHold' }
 
-        -- 数据库可视化UI
-        require('pack/vim-dadbod').config()
-        use { 'tpope/vim-dadbod', cmd = "DBUI" }
-        use { 'kristijanhusak/vim-dadbod-ui', config = "require('pack/vim-dadbod').setup()", after = 'vim-dadbod' }
+        -- -- 数据库可视化UI
+        -- require('pack/vim-dadbod').config()
+        -- use { 'tpope/vim-dadbod', cmd = "DBUI" }
+        -- use { 'kristijanhusak/vim-dadbod-ui', config = "require('pack/vim-dadbod').setup()", after = 'vim-dadbod' }
 
         -- coc-nvim
         -- 如果想 lazy coc -> {  event = { 'InsertEnter', 'CmdLineEnter', 'CursorHold' }, fn = 'CocAction', keys = '<Plug>(coc-definition)' }
         require('pack/coc').config()
         use { 'neoclide/coc.nvim', config = "require('pack/coc').setup()", branch = 'release' }
 
-        -- wilder 弹出式命令行
-        use { 'gelguy/wilder.nvim', event = 'CmdlineEnter', config = 'require("pack/wilder").setup()' }
+        -- -- wilder 弹出式命令行
+        -- use { 'gelguy/wilder.nvim', event = 'CmdlineEnter', config = 'require("pack/wilder").setup()' }
 
         -- github copilot
         require('pack/copilot').config()
@@ -88,11 +88,14 @@ require('packer').startup({
         require('pack/nvim-lines').config()
         use { 'yaocccc/nvim-lines.lua', config = "require('pack/nvim-lines').setup()" }
 
+        -- bufdelete
+        use { 'famiu/bufdelete.nvim' }
+
         -- 部分个人自写插件
         require('pack/yaocccc').config()                                               -- yaocccc/* 共用一个config
         use { 'yaocccc/vim-comment', cmd = '*ToggleComment' }                          -- 注释插件
         use { 'yaocccc/vim-echo', cmd = "VECHO" }                                      -- 快速echo、print
-        use { 'yaocccc/vim-fcitx2en', event = 'InsertLeavePre' }                       -- 退出输入模式时自动切换到英文
+        -- use { 'yaocccc/vim-fcitx2en', event = 'InsertLeavePre' }                       -- 退出输入模式时自动切换到英文
         use { 'yaocccc/nvim-hlchunk', event = { 'CursorMoved', 'CursorMovedI' } }      -- 高亮{}范围
         use { 'yaocccc/vim-surround', event = 'ModeChanged' }                          -- 操作成对的 ""  {}  [] 等的插件
         use { 'yaocccc/nvim-foldsign', event = 'CursorHold', config = 'require("nvim-foldsign").setup()' } -- signcolumn显示折叠信息

@@ -43,13 +43,12 @@
     "git.splitWindowCommand": "below 10sp",
     "java.clean.workspace": true,
     "java.configuration.runtimes": [
-        {
-            "name": "JavaSE-14",
-            "path": "/opt/jdk-14.0.2",
-            "default": true
-        }
+      {
+        "path": "/usr/lib/jvm/default-runtime",
+        "default": true
+      }
     ],
-    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.6/clangd_15.0.6/bin/clangd",
+    "clangd.path": "/usr/bin/clangd",
     "prettier": {
         "tabWidth": 4,
         "printWidth": 160,
