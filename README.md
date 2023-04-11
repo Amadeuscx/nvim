@@ -215,18 +215,18 @@ PS: 如果需要格式化js和ts代码，请手动安装: npm i js-beautify -g
 
   [github: **junegunn/fzf.vim**](https://github.com/junegunn/fzf.vim)  
 
-  注意要配合ag使用，请自己手动安装: the_silver_searcher fd bat  
+  注意要配合rg使用，请自己手动安装: ripgrep fd bat  
 
   | 模式   | 键                   | 说明                                 |
   | ------ | --------             | ---------                            |
-  | normal | ctrl + a             | Ag搜索(全局文本搜索)                 |
+  | normal | ctrl + a             | Rg搜索(全局文本搜索)                 |
   | normal | ctrl + l             | 当前buffer文本搜索                   |
   | normal | ctrl + p             | 全局文件搜索                         |
   | normal | ctrl + g             | git变更文件搜索                      |
   | normal | ctrl + h             | 历史文件搜索                         |
   | fzf中  | ctrl + /             | 启动/关闭 预览                       |
-  | fzf中  | ctrl + n             | 下一个搜索词                         |
-  | fzf中  | ctrl + p             | 上一个搜索词                         |
+  | fzf中  | ctrl + n             | 下一个搜索历史                       |
+  | fzf中  | ctrl + p             | 上一个搜索历史                       |
 
 </details>
 
@@ -259,7 +259,7 @@ PS: 如果需要格式化js和ts代码，请手动安装: npm i js-beautify -g
   | nvim-tree内 | p                    | 从剪切板粘贴                         |
   | nvim-tree内 | y                    | 复制文件名                           |
   | nvim-tree内 | ?                    | 查看帮助                             |
-  | nvim-tree内 | C                    | 若当前查看的文件为外部文件 cd到目录  |
+  | nvim-tree内 | go                   | 若当前查看的文件为外部文件 cd到目录  |
 
 </details>
 
@@ -390,6 +390,6 @@ PS: 如果需要格式化js和ts代码，请手动安装: npm i js-beautify -g
 
 ## Support: buy me a coffee
 
-<a href="https://www.buymeacoffee.com/yaocccc" target="_blank">
+<a href="#TOP" target="_blank">
   <img src="https://github.com/yaocccc/yaocccc/raw/master/qr.png">
 </a>
