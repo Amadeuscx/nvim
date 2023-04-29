@@ -47,7 +47,7 @@ function M.config()
         ["@tag.attribute"] = { fg = 166 };
         ["@tag.delimiter"] = { fg = 150 };
         ["@conditional.ternary"] = { fg = 1 };
-        ["@punctuation.special"] = { fg = 166 };
+        ["@punctuation.special"] = { fg = 172 };
 
         ["@text.literal"] = { fg = 7 };
 

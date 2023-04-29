@@ -14,4 +14,9 @@ function M.setup()
     -- do nothing
 end
 
+function M.setup_hlcodeblock()
+    G.hi({ ["MDCodeBlock"] = { bg = 234 }, })
+    require('hl-mdcodeblock').setup()
+end
+
 return M

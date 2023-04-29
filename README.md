@@ -32,12 +32,11 @@
 ├─ lua/                -- LUA配置目录
 │  ├─ pack/            -- 各插件的配置目录
 │  ├─ G.lua            -- G: Global 封装了lua配置内用到的部分通用方法
+│  ├─ profile.lua      -- 环境变量(各种set)
 │  ├─ keymap.lua       -- 快捷键配置
-│  ├─ autocmd.lua      -- 自动命令
 │  ├─ packinit.lua     -- 插件配置入口
-│  └─ profile.lua      -- 环境变量(各种set)
+│  └─ autocmd.lua      -- 自动命令
 ├─ colors/             -- 样式相关(theme)
-├─ ftplugin/           -- 单独文件类型独有的配置
 ├─ snippets/           -- 代码片段
 ├─ init.lua            -- 配置入口
 ├─ coc-settings.json   -- coc配置
@@ -333,6 +332,15 @@ PS: 如果需要格式化js和ts代码，请手动安装: npm i js-beautify -g
   <summary style="cursor: pointer; text-decoration:underline; color: #2AD;">yaocccc/nvim-hlchunk -- {}区间高亮</summary>
 
   [github: yaocccc/nvim-hlchunk](https://github.com/yaocccc/nvim-hlchunk)  
+
+  没啥好说明的 用就完了
+
+</details>
+
+<details>
+  <summary style="cursor: pointer; text-decoration:underline; color: #2AD;">yaocccc/nvim-hl-mdcodeblock.lua -- 高亮markdown中的代码块</summary>
+
+  [github: yaocccc/nvim-hl-mdcodeblock.lua](https://github.com/yaocccc/nvim-hl-mdcodeblock.lua)  
 
   没啥好说明的 用就完了
 
