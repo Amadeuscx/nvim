@@ -1,18 +1,6 @@
 local G = require('G')
 
 G.g.python3_host_prog = os.getenv('PYTHON') -- export PYTHON=$(which python3)
-G.g.clipboard = {
-    name = "win32yank",
-    copy = {
-        ["+"] = "win32yank.exe -i --crlf",
-        ["*"] = "win32yank.exe -i --crlf",
-    },
-    paste = {
-        ["+"] = "win32yank.exe -o --lf",
-        ["*"] = "win32yank.exe -o --lf",
-    },
-    cache_enabled = 1,
-}
 G.opt.showcmd = true
 G.opt.encoding = 'utf-8'
 G.opt.wildmenu = true
