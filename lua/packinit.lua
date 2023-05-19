@@ -40,8 +40,8 @@ require('packer').startup({
         -- use { 'lfv89/vim-interestingwords', config = "require('pack/vim-interestingwords').setup()" }
 
         -- -- 多光标插件
-        -- require('pack/vim-visual-multi').config()
-        -- use { 'mg979/vim-visual-multi', config = "require('pack/vim-visual-multi').setup()", event = 'CursorHold' }
+        require('pack/vim-visual-multi').config()
+        use { 'mg979/vim-visual-multi', config = "require('pack/vim-visual-multi').setup()", event = 'CursorHold' }
 
         -- -- 数据库可视化UI
         -- require('pack/vim-dadbod').config()

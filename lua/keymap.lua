@@ -28,7 +28,7 @@ G.map({
     -- { 'n', '<c-s>',       ':<c-u>%s/\\v//gc<left><left><left><left>', { noremap = true } },
     -- { 'v', '<c-s>',       ':s/\\v//gc<left><left><left><left>',       { noremap = true } },
 
-    -- -- only change text
+    -- only change text
     -- { 'v', '<BS>',        '"_d',              { noremap = true } },
     -- { 'n', 'x',           '"_x',              { noremap = true } },
     -- { 'v', 'x',           '"_x',              { noremap = true } },
@@ -43,10 +43,10 @@ G.map({
     { 'n', 'Q',           ':q!',                     { noremap = true, silent = true } },
 
     -- -- VISUAL SELECT模式 s-tab tab左右缩进
-    -- { 'v', '<',           '<gv',              { noremap = true } },
-    -- { 'v', '>',           '>gv',              { noremap = true } },
-    -- { 'v', '<s-tab>',     '<gv',              { noremap = true } },
-    -- { 'v', '<tab>',       '>gv',              { noremap = true } },
+    { 'v', '<',           '<gv',              { noremap = true } },
+    { 'v', '>',           '>gv',              { noremap = true } },
+    { 'v', '<s-tab>',     '<gv',              { noremap = true } },
+    { 'v', '<tab>',       '>gv',              { noremap = true } },
 
     -- -- 重写Shift + 左右
     -- { 'v', '<s-right>',   'e',                { noremap = true } },
@@ -80,25 +80,25 @@ G.map({
     -- { 'n', '<m-a>',       'ggVG',             { noremap = true } },
     -- { 'n', '<m-s>',       'vi{',              { noremap = true } },
 
-    -- -- emacs风格快捷键 清空一行
+    -- emacs风格快捷键 清空一行
     -- { 'n', '<c-u>',       'cc<Esc>',          { noremap = true } },
     -- { 'i', '<c-u>',       '<Esc>cc',          { noremap = true } },
     -- { 'i', '<c-a>',       '<Esc>I',           { noremap = true } },
     -- { 'i', '<c-e>',       '<Esc>A',           { noremap = true } },
 
     -- alt + 上 下移动行
-    -- { 'n', '<m-up>',      ':m .-2<cr>',       { noremap = true, silent = true } },
-    -- { 'n', '<m-down>',    ':m .+1<cr>',       { noremap = true, silent = true } },
-    -- { 'i', '<m-up>',      '<Esc>:m .-2<cr>i', { noremap = true, silent = true } },
-    -- { 'i', '<m-down>',    '<Esc>:m .+1<cr>i', { noremap = true, silent = true } },
-    -- { 'v', '<m-up>',      ":m '<-2<cr>gv",    { noremap = true, silent = true } },
-    -- { 'v', '<m-down>',    ":m '>+1<cr>gv",    { noremap = true, silent = true } },
+    { 'n', '<m-k>',      ':m .-2<cr>',       { noremap = true, silent = true } },
+    { 'n', '<m-j>',    ':m .+1<cr>',       { noremap = true, silent = true } },
+    { 'i', '<m-k>',      '<Esc>:m .-2<cr>i', { noremap = true, silent = true } },
+    { 'i', '<m-j>',    '<Esc>:m .+1<cr>i', { noremap = true, silent = true } },
+    { 'v', '<m-k>',      ":m '<-2<cr>gv",    { noremap = true, silent = true } },
+    { 'v', '<m-j>',    ":m '>+1<cr>gv",    { noremap = true, silent = true } },
 
     -- alt + key 操作
     -- { 'i', '<m-d>',       '<Esc>"_ciw',       { noremap = true } },
     -- { 'i', '<m-r>',       '<Esc>"_ciw',       { noremap = true } },
-    -- { 'i', '<m-o>',       '<Esc>o',           { noremap = true } },
-    -- { 'i', '<m-O>',       '<Esc>O',           { noremap = true } },
+    { 'i', '<m-o>',       '<Esc>o',           { noremap = true } },
+    { 'i', '<m-O>',       '<Esc>O',           { noremap = true } },
     -- { 'n', '<m-d>',       '"_diw',            { noremap = true } },
     -- { 'n', '<m-r>',       '"_ciw',            { noremap = true } },
 
@@ -119,7 +119,7 @@ G.map({
     -- buffers
     -- { 'n', 'W',           ':bw<cr>',          { noremap = true, silent = true } },
     -- { 'n', 'ss',          ':bn<cr>',          { noremap = true, silent = true } },
-    { 'n', '<leader>q',   ':Bdelete<cr>',     { noremap = true, silent = true } },
+    { 'n', '<Space>q',   ':Bdelete<cr>',     { noremap = true, silent = true } },
     { 'n', '<m-h>',       ':bp<cr>',          { noremap = true, silent = true } },
     { 'n', '<m-l>',       ':bn<cr>',          { noremap = true, silent = true } },
     { 'v', '<m-h>',       '<esc>:bp<cr>',     { noremap = true, silent = true } },
@@ -134,8 +134,8 @@ G.map({
     -- { 'n', '\\w',         "&wrap == 1 ? ':set nowrap<cr>' : ':set wrap<cr>'", { noremap = true, expr = true } },
 
     -- 折叠
-    -- { 'n', '-',           "foldlevel('.') > 0 ? 'za' : 'va{zf^'",             { noremap = true, silent = true, expr = true } },
-    -- { 'v', '-',           'zf',                                               { noremap = true, silent = true } },
+    { 'n', '-',           "foldlevel('.') > 0 ? 'za' : 'va{zf^'",             { noremap = true, silent = true, expr = true } },
+    { 'v', '-',           'zf',                                               { noremap = true, silent = true } },
 
     -- -- space 行首行尾跳转
     -- { 'n', '<space>',     ':call v:lua.MagicMove()<cr>',                      { noremap = true, silent = true } },
