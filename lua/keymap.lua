@@ -10,6 +10,7 @@ G.map({
     -- { 'n', ',',           '@q',               { noremap = true } },
     { 'n', '\\',          ':nohlsearch<CR>',  { noremap = true } },
 
+
     -- -- 快速删除
     -- { 'n', '<bs>',        '"_ciw',                                                        { noremap = true } },
     -- { 'i', '<c-h>',       'col(".") == col("$") ? \'<esc>"_db"_xa\' : \'<esc>"_db"_xi\'', { noremap = true, expr = true } },
@@ -38,9 +39,19 @@ G.map({
     -- { 'v', 'P',           'Pgvy',             { noremap = true } },
 
     -- S保存 Q退出
-    -- { 'n', 'S',           ':call v:lua.MagicSave()<cr>', { noremap = true, silent = true } },
-    -- { 'v', 'S',           ':call v:lua.MagicSave()<cr>', { noremap = true, silent = true } },
-    { 'n', 'Q',           ':q!',                     { noremap = true, silent = true } },
+    { 'n', 'S',           ':call v:lua.MagicSave()<cr>', { noremap = true, silent = true } },
+    { 'v', 'S',           ':call v:lua.MagicSave()<cr>', { noremap = true, silent = true } },
+    { 'n', 'Q',           ':q<cr>',                      { noremap = true, silent = true } },
+
+    -- alt+hjkl 写入模式下上下左右
+    { 'i', '<m-j>',       '<down>',           { noremap = true } },
+    { 'v', '<m-j>',       '<down>',           { noremap = true } },
+    { 'i', '<m-k>',       '<up>',             { noremap = true } },
+    { 'v', '<m-j>',       '<up>',             { noremap = true } },
+    { 'i', '<m-h>',       '<left>',           { noremap = true } },
+    { 'v', '<m-h>',       '<left>',           { noremap = true } },
+    { 'i', '<m-l>',       '<right>',          { noremap = true } },
+    { 'v', '<m-l>',       '<right>',          { noremap = true } },
 
     -- -- VISUAL SELECT模式 s-tab tab左右缩进
     { 'v', '<',           '<gv',              { noremap = true } },
@@ -86,13 +97,13 @@ G.map({
     -- { 'i', '<c-a>',       '<Esc>I',           { noremap = true } },
     -- { 'i', '<c-e>',       '<Esc>A',           { noremap = true } },
 
-    -- alt + 上 下移动行
-    { 'n', '<m-k>',      ':m .-2<cr>',       { noremap = true, silent = true } },
-    { 'n', '<m-j>',    ':m .+1<cr>',       { noremap = true, silent = true } },
-    { 'i', '<m-k>',      '<Esc>:m .-2<cr>i', { noremap = true, silent = true } },
-    { 'i', '<m-j>',    '<Esc>:m .+1<cr>i', { noremap = true, silent = true } },
-    { 'v', '<m-k>',      ":m '<-2<cr>gv",    { noremap = true, silent = true } },
-    { 'v', '<m-j>',    ":m '>+1<cr>gv",    { noremap = true, silent = true } },
+    -- ctrl + 上 下移动行
+    { 'n', '<c-k>',      ':m .-2<cr>',       { noremap = true, silent = true } },
+    { 'n', '<c-j>',      ':m .+1<cr>',       { noremap = true, silent = true } },
+    { 'i', '<c-k>',      '<Esc>:m .-2<cr>i', { noremap = true, silent = true } },
+    { 'i', '<c-j>',      '<Esc>:m .+1<cr>i', { noremap = true, silent = true } },
+    { 'v', '<c-k>',      ":m '<-2<cr>gv",    { noremap = true, silent = true } },
+    { 'v', '<c-j>',      ":m '>+1<cr>gv",    { noremap = true, silent = true } },
 
     -- alt + key 操作
     -- { 'i', '<m-d>',       '<Esc>"_ciw',       { noremap = true } },
@@ -119,16 +130,16 @@ G.map({
     -- buffers
     -- { 'n', 'W',           ':bw<cr>',          { noremap = true, silent = true } },
     -- { 'n', 'ss',          ':bn<cr>',          { noremap = true, silent = true } },
-    { 'n', '<Space>q',   ':Bdelete<cr>',     { noremap = true, silent = true } },
-    { 'n', '<m-h>',       ':bp<cr>',          { noremap = true, silent = true } },
-    { 'n', '<m-l>',       ':bn<cr>',          { noremap = true, silent = true } },
-    { 'v', '<m-h>',       '<esc>:bp<cr>',     { noremap = true, silent = true } },
-    { 'v', '<m-l>',       '<esc>:bn<cr>',     { noremap = true, silent = true } },
-    { 'i', '<m-h>',       '<esc>:bp<cr>',     { noremap = true, silent = true } },
-    { 'i', '<m-l>',       '<esc>:bn<cr>',     { noremap = true, silent = true } },
+    { 'n', '<c-q>',       ':Bdelete<cr>',     { noremap = true, silent = true } },
+    { 'n', '<c-h>',       ':bp<cr>',          { noremap = true, silent = true } },
+    { 'n', '<c-l>',       ':bn<cr>',          { noremap = true, silent = true } },
+    { 'v', '<c-h>',       '<esc>:bp<cr>',     { noremap = true, silent = true } },
+    { 'v', '<c-l>',       '<esc>:bn<cr>',     { noremap = true, silent = true } },
+    { 'i', '<c-h>',       '<esc>:bp<cr>',     { noremap = true, silent = true } },
+    { 'i', '<c-l>',       '<esc>:bn<cr>',     { noremap = true, silent = true } },
 
     -- tt 打开一个10行大小的终端
-    { 'n', 'tt',          ':below 10sp | term<cr>a',                          { noremap = true, silent = true } },
+    -- { 'n', 'tt',          ':below 10sp | term<cr>a',                          { noremap = true, silent = true } },
 
     -- 切换是否wrap
     -- { 'n', '\\w',         "&wrap == 1 ? ':set nowrap<cr>' : ':set wrap<cr>'", { noremap = true, expr = true } },
@@ -138,9 +149,9 @@ G.map({
     { 'v', '-',           'zf',                                               { noremap = true, silent = true } },
 
     -- -- space 行首行尾跳转
-    -- { 'n', '<space>',     ':call v:lua.MagicMove()<cr>',                      { noremap = true, silent = true } },
-    -- { 'n', '0',           '%',                                                { noremap = true } },
-    -- { 'v', '0',           '%',                                                { noremap = true } },
+    { 'n', '<space>',     ':call v:lua.MagicMove()<cr>',                      { noremap = true, silent = true } },
+    { 'n', '0',           '%',                                                { noremap = true } },
+    { 'v', '0',           '%',                                                { noremap = true } },
 
     -- 驼峰转换
     { 'v', 'T',           ':call v:lua.MagicToggleHump(v:true)<CR>',          { noremap = true, silent = true } },

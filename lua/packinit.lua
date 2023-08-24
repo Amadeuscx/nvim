@@ -57,8 +57,8 @@ require('packer').startup({
         -- use { 'gelguy/wilder.nvim', event = 'CmdlineEnter', config = 'require("pack/wilder").setup()' }
 
         -- github copilot
-        require('pack/copilot').config()
-        use { 'github/copilot.vim', config = "require('pack/copilot').setup()", event = 'InsertEnter' }
+        -- require('pack/copilot').config()
+        -- use { 'github/copilot.vim', config = "require('pack/copilot').setup()", event = 'InsertEnter' }
 
         -- 浮动终端
         require('pack/vim-floaterm').config()
@@ -77,7 +77,7 @@ require('packer').startup({
         -- markdown预览插件 导航生成插件
         require('pack/markdown').config()
         use { 'mzlogin/vim-markdown-toc', ft = 'markdown' }
-        use { 'iamcco/markdown-preview.nvim', config = "require('pack/markdown').setup()", run = 'cd app && yarn install', cmd = 'MarkdownPreview', ft = 'markdown' }
+        use { 'iamcco/markdown-preview.nvim', config = "require('pack/markdown').setup()", run = 'cd app && npm install', cmd = 'MarkdownPreview', ft = 'markdown' }
 
         -- 文件管理器
         require('pack/nvim-tree').config()
