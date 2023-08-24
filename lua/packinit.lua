@@ -91,6 +91,11 @@ require('packer').startup({
         -- bufdelete
         use { 'famiu/bufdelete.nvim' }
 
+        -- use { 'jbyuki/venn.nvim', cmd = 'VBox', config = function()
+        --     G.map({ { 'v', '<space>', ':VBox<cr>', { noremap = true, silent = true } } })
+        -- end }
+
+
         -- 部分个人自写插件
         require('pack/yaocccc').config()                                               -- yaocccc/* 共用一个config
         use { 'yaocccc/vim-comment', cmd = '*ToggleComment' }                          -- 注释插件

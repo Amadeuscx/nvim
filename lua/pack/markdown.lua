@@ -16,7 +16,9 @@ end
 
 function M.setup_hlcodeblock()
     G.hi({ ["MDCodeBlock"] = { bg = 234 }, })
-    require('hl-mdcodeblock').setup({ minumum_len = function () return math.max(math.floor(vim.api.nvim_win_get_width(0) * 0.8), 100) end })
+    require('hl-mdcodeblock').setup({
+        minumum_len = 80,
+    })
 end
 
 return M

@@ -51,8 +51,12 @@
         "default": true
       }
     ],
+<<<<<<< HEAD
     "clangd.path": "/usr/bin/clangd",
     "clangd.arguments": ["--header-insertion=never"],
+=======
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/16.0.2/clangd_16.0.2/bin/clangd",
+>>>>>>> upstream/master
     "prettier": {
         "tabWidth": 4,
         "printWidth": 160,
