@@ -98,7 +98,7 @@ require('packer').startup({
 
         -- 部分个人自写插件
         require('pack/yaocccc').config()                                               -- yaocccc/* 共用一个config
-        use { 'yaocccc/vim-comment', cmd = '*ToggleComment' }                          -- 注释插件
+        use { 'Amadeuscx/vim-comment', cmd = '*ToggleComment' }                          -- 注释插件
         use { 'yaocccc/vim-echo', cmd = "VECHO" }                                      -- 快速echo、print
         use { 'yaocccc/vim-fcitx2en', event = 'InsertLeavePre' }                       -- 退出输入模式时自动切换到英文
         use { 'yaocccc/nvim-hlchunk', event = { 'CursorMoved', 'CursorMovedI' } }      -- 高亮{}范围
